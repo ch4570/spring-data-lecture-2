@@ -2,17 +2,13 @@ spring:
   profiles:
     active: local
 
-
-  datasource:
-    url: jdbc:h2:tcp://localhost/~/test
-    username: sa
-    password:
-
-# JdbcTemplate Sql-Log Setting
+# Log Setting
 logging:
   level:
     org.springframework.jdbc: debug
     hello.itemservice.repository.mybatis: trace
+    org.hibernate.SQL: debug        # Hibernate가 생성하고 실행하는 SQL을 확인할 수 있다.
+    org.hibernate.type.descriptor.sql.BasicBinder: trace   # SQL에 바인딩되는 파라미터를 확인할 수 있다.
 
 
 # MyBatis

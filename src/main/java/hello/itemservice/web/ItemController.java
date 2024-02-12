@@ -48,7 +48,7 @@ public class ItemController {
 
     @GetMapping("/{itemId}/edit")
     public String editForm(@PathVariable Long itemId, Model model) {
-        Item item = itemService.findById(itemId).get();
+        Item item = itemService.findById(itemId).orElseThrow();
         model.addAttribute("item", item);
         return "editForm";
     }

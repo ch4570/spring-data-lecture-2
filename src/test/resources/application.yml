@@ -2,12 +2,20 @@ spring:
   profiles:
     active: test
 
+  # 여러 데이터 소스가 사용될 때 같은 데이터베이스를 사용하면서 발생하는 충돌 방지를 위한 Unique_ID 생성 옵션
+  # -> 그대로 두는 것이 좋다 -> false 처리를 굳이 해줄 필요가 없다.
   datasource:
-    url: jdbc:h2:tcp://localhost/~/testcase
-    username: sa
-    password:
+    generate-unique-name: false
 
-
+# JdbcTemplate Sql-Log Setting
 logging:
   level:
     org.springframework.jdbc: debug
+    hello.itemservice.repository.mybatis: trace
+
+# MyBatis
+mybatis:
+  type-aliases-package: hello.itemservice.domain
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/**/*.xml

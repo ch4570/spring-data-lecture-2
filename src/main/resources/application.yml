@@ -3,13 +3,21 @@ spring:
     active: local
 
 
-
   datasource:
     url: jdbc:h2:tcp://localhost/~/test
     username: sa
     password:
 
-
+# JdbcTemplate Sql-Log Setting
 logging:
   level:
     org.springframework.jdbc: debug
+    hello.itemservice.repository.mybatis: trace
+
+
+# MyBatis
+mybatis:
+  type-aliases-package: hello.itemservice.domain
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/**/*.xml

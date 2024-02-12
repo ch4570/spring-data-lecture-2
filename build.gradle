@@ -23,6 +23,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	// JdbcTemplate 추가
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	// MyBatis 추가 -> Spring이 관리하지 않는 프로젝트는 버전 정보가 들어가야한다.
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
 	// h2 Database 추가
 	runtimeOnly 'com.h2database:h2'
 	compileOnly 'org.projectlombok:lombok'

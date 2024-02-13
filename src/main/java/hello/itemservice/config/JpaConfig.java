@@ -1,8 +1,7 @@
 package hello.itemservice.config;
 
 import hello.itemservice.repository.ItemRepository;
-import hello.itemservice.repository.jpa.JpaItemRepository;
-import hello.itemservice.repository.mybatis.MyBatisItemRepository;
+import hello.itemservice.repository.jpa.JpaItemRepositoryV1;
 import hello.itemservice.service.ItemService;
 import hello.itemservice.service.ItemServiceV1;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +23,6 @@ public class JpaConfig {
 
     @Bean
     public ItemRepository itemRepository() {
-        return new JpaItemRepository(em);
+        return new JpaItemRepositoryV1(em);
     }
 }

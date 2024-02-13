@@ -58,7 +58,7 @@ class ItemRepositoryTest {
     }
 
     @Test
-    @Commit // JPA는 Commit 하지 않으면 Update SQL을 실행하지 않기 때문에, 쿼리를 확인하려면 @Commit을 사용하거나 flush()를 호출해야 한다.
+//    @Commit // JPA는 Commit 하지 않으면 Update SQL을 실행하지 않기 때문에, 쿼리를 확인하려면 @Commit을 사용하거나 flush()를 호출해야 한다.
     void updateItem() {
         //given
         Item item = new Item("item1", 10000, 10);

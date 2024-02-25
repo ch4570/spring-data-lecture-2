@@ -17,7 +17,8 @@ import org.springframework.context.annotation.Profile;
 //@Import(MybatisConfig.class)
 //@Import(JpaConfig.class)
 //@Import(SpringDataJpaConfig.class)
-@Import(QueryDslConfig.class)
+//@Import(QueryDslConfig.class)
+@Import(V2Config.class)
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web")
 public class ItemServiceApplication {
 
